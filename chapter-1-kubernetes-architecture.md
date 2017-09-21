@@ -2,8 +2,11 @@
 <!-- $size: 16:9 -->
 <!-- footer: @jolestar -->
 
+
+---
 # Kubernetes 完全教程
 ## Kubernetes 架构概述
+
 ### 王渊命 @jolestar
 
 ![bg](images/bg.png) 
@@ -167,3 +170,4 @@ spec:
 ---
 
 <img style="width:100%;height=100%;margin:0;padding:0;" src="images/about-us.png"/>
+
