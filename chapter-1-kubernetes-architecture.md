@@ -3,7 +3,6 @@
 <!-- footer: @jolestar -->
 
 
----
 # Kubernetes 完全教程
 ## Kubernetes 架构概述
 
