@@ -297,17 +297,6 @@ TaintBasedEvictions=true|false (ALPHA - default=false)
 ![bg](images/bg.png) 
 
 ---
-# Kube-dns
-
-1. 启动方式 Deployment
-1. 配置文件
-    - kubernetes deployment yaml
-1. 主要参数(参看配置文件)
-	
-
-![bg](images/bg.png) 
-
----
 # Kube-addon-manager
 
 1. 启动方式 StaticPod
