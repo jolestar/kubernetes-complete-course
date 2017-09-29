@@ -18,7 +18,6 @@
 1. Kubernetes 的高可用
 1. Kubernetes 的使用以及运维
 
-![bg](images/bg.png) 
 
 ---
 # Kubernetes 的安装 -- 条条大路通罗马
@@ -27,7 +26,6 @@
 1. 自定义安装 kops, ansible, salt, juju
 1. kubeadm
 
-![bg](images/bg.png) 
 
 ---
 # 准备基础的 VM 镜像
@@ -49,7 +47,6 @@ apt-get install -y docker-engine
 DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" dist-upgrade
 ```
 
-![bg](images/bg.png) 
 
 ---
 # 安装 kubelet, kubeadm
@@ -68,8 +65,6 @@ kubeadm completion bash >/etc/profile.d/kubeadm.sh
 kubectl completion bash >/etc/profile.d/kubectl.sh
 source /etc/profile
 ```
-
-![bg](images/bg.png) 
 
 ---
 # 初始化 master
@@ -90,7 +85,6 @@ kubectl get pods --all-namespaces
 kubectl get nodes
 ```
 
-![bg](images/bg.png) 
 
 ---
 # 初始化网络
@@ -111,8 +105,6 @@ kubectl get pods --all-namespaces
 kubectl get nodes
 ```
 
-![bg](images/bg.png) 
-
 ---
 # 新增节点
 
@@ -126,8 +118,6 @@ kubeadm join --token $init_token $apiserver-advertise-address:6443
 kubectl get nodes
 ```
 
-
-![bg](images/bg.png) 
 
 ---
 # 部署 helloworld
@@ -147,8 +137,6 @@ kubectl exec $podname -- nping $pod2ip
 kubectl exec $podname -- curl -k https://kubernetes
 ```
 
-![bg](images/bg.png) 
-
 ---
 # 解决 flannel 网络问题
 
@@ -164,7 +152,6 @@ iptables -P FORWARD ACCEPT
 重新测试 pod 之间以及 pod 和 apiserver 之间的网络
 关于 Kubernetes 网络以及网络故障的排查，将在后面的 Kubernetes 网络课程里介绍
 
-![bg](images/bg.png) 
 
 ---
 # Kubernetes 的组件
@@ -182,7 +169,6 @@ iptables -P FORWARD ACCEPT
 6. etcd
 7. flannel
 
-![bg](images/bg.png) 
 
 ---
 # Kubelet
@@ -200,7 +186,6 @@ iptables -P FORWARD ACCEPT
 	- cluster-dns=10.96.0.10 --cluster-domain=cluster.local
 	- feature-gates
 
-![bg](images/bg.png) 
 
 ---
 # Kube-controller-manager 和 kube-scheduler
@@ -216,7 +201,6 @@ iptables -P FORWARD ACCEPT
     - leader-elect
 	- feature-gates
 
-![bg](images/bg.png) 
 
 ---
 # Kube-apiserver
@@ -235,7 +219,6 @@ iptables -P FORWARD ACCEPT
     - service-cluster-ip-range=10.96.0.0/12
 	- feature-gates
 
-![bg](images/bg.png) 
 
 ---
 # Kube-proxy
@@ -248,7 +231,6 @@ iptables -P FORWARD ACCEPT
 	- masquerade-all
 	- feature-gates
 
-![bg](images/bg.png) 
 
 ---
 # feature-gates
@@ -272,7 +254,6 @@ StreamingProxyRedirects=true|false (BETA - default=true)
 TaintBasedEvictions=true|false (ALPHA - default=false)
 ```
 
-![bg](images/bg.png) 
 
 ---
 # Kube-dns
@@ -283,8 +264,6 @@ TaintBasedEvictions=true|false (ALPHA - default=false)
 1. 主要参数(参看配置文件)
 	
 
-![bg](images/bg.png) 
-
 ---
 # Etcd
 
@@ -294,7 +273,6 @@ TaintBasedEvictions=true|false (ALPHA - default=false)
 1. 主要参数(参看配置文件)
 	
 
-![bg](images/bg.png) 
 
 ---
 # Kube-addon-manager
@@ -305,8 +283,7 @@ TaintBasedEvictions=true|false (ALPHA - default=false)
     - https://github.com/kubernetes/kubernetes/blob/master/cluster/saltbase/salt/kube-addons/kube-addon-manager.yaml
     - https://github.com/kubernetes/kubernetes/tree/master/cluster/addons/addon-manager
 
-	
-![bg](images/bg.png) 
+
 
 ---
 # Kubernetes 高可用
@@ -315,7 +292,7 @@ TaintBasedEvictions=true|false (ALPHA - default=false)
 
 [https://kubernetes.io/docs/admin/high-availability/](https://kubernetes.io/docs/admin/high-availability/)
 	
-![bg](images/bg.png) 
+
 
 ---
 # Kubernetes 高可用
@@ -326,8 +303,7 @@ TaintBasedEvictions=true|false (ALPHA - default=false)
 	- [https://github.com/kubernetes/contrib/tree/master/election](https://github.com/kubernetes/contrib/tree/master/election)
 	- [http://jolestar.com/kubernetes-and-microservice/](http://jolestar.com/kubernetes-and-microservice/)
 
-	
-![bg](images/bg.png) 
+
 
 ---
 # Kubernetes selfhosting
@@ -359,7 +335,6 @@ TaintBasedEvictions=true|false (ALPHA - default=false)
     kubectl get ds -n kube-system
     ```
 	
-![bg](images/bg.png) 
 
 ---
 # Kops 和 Minikube
@@ -368,7 +343,6 @@ TaintBasedEvictions=true|false (ALPHA - default=false)
 1. Minikube [https://github.com/kubernetes/minikube](https://github.com/kubernetes/minikube)
 
 
-![bg](images/bg.png) 
 
 ---
 # Kubernetes 使用以及运维
@@ -377,8 +351,6 @@ TaintBasedEvictions=true|false (ALPHA - default=false)
 1. kubectl proxy
 1. node 相关操作
 
-
-![bg](images/bg.png) 
 
 ---
 # kubectl
@@ -409,7 +381,6 @@ Cluster Management Commands:
   taint          Update the taints on one or more nodes
 ```
 
-![bg](images/bg.png) 
 
 ---
 # kubectl
@@ -480,7 +451,6 @@ Kubernetes 安装本身并不复杂，但是
 1. 在本地通过 minikube 搭建一个 Kubernetes 开发集群。
 1. 通过云服务商部署一个托管 Kubernetes 集群，（推荐通过 QingCloud青云的 appcenter 进行部署。https://appcenter.qingcloud.com/apps/app-u0llx5j8） 研究 Kubernetes 的 CloudProvider 机制，以及网络和存储方案。
 
-![bg](images/bg.png) 
 
 ---
 ### 关于我

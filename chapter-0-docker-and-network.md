@@ -16,14 +16,12 @@
 1. Kubernetes 中的 Pod 和容器的关系
 1. 后续 Kubernetes 课程介绍
 
-![bg](images/bg.png) 
 
 ---
 # 容器是什么？
 
 ![container](images/container.png)
 
-![bg](images/bg.png) 
 
 ---
 # 技术领域的容器（Container)
@@ -32,7 +30,6 @@
 - J2ee Web Container
 - Linux Container（LXC，Docker)
 
-![bg](images/bg.png)
 
 ---
 # 容器的特性
@@ -43,14 +40,12 @@
 	- add/remove/iterator（复用算法）
 	- 应用管理和调度
 
-![bg](images/bg.png) 
 
 ---
 # 容器（Linux Container）的历史
 
 ![container-history](images/container-history.jpg)
 
-![bg](images/bg.png) 
 
 ---
 # Docker (Moby)  如何实现应用标准化
@@ -67,12 +62,10 @@
 |安装包的仓库| nexus, rpm rep，ftp|Docker Registry|
 
 
-![bg](images/bg.png) 
 
 ---
 # 手动打造一个 Docker -- Xocker
 
-![bg](images/bg.png) 
 
 ---
 # 安装 Docker 以及一些工具
@@ -90,7 +83,7 @@ apt-get update
 apt-cache policy docker-engine
 apt-get install -y docker-engine
 ```
-![bg](images/bg.png) 
+
 
 ---
 # 准备目录以及一个 Docker 镜像
@@ -109,7 +102,6 @@ tar -xvf busybox.tar -C busybox/
 ```
 解压 Image，分析构成，以及把其中的 Image Layer 解压，并移动到 /var/lib/xocker/image/busybox/
 
-![bg](images/bg.png) 
 
 ---
 # 分层文件系统
@@ -158,7 +150,6 @@ ip netns exec netns_test ip addr add 172.18.0.2/24 dev veth1_1
 ip netns exec netns_test ip link set dev veth1_1 up
 ip netns exec netns_test ip route add default via 172.18.0.2
 ```
-![bg](images/bg.png) 
 
 ---
 
@@ -169,7 +160,6 @@ cgcreate -g cpu,cpuacct,memory:/test
 cgexec -g "cpu,cpuacct,memory:/test"  ip netns exec netns_test unshare -fmuip --mount-proc chroot "/var/lib/xocker/mnt/1" /bin/sh -c "/bin/mount -t proc proc /proc && /bin/sh"
 ```
 
-![bg](images/bg.png) 
 
 ---
 # Kubernetes 中的 Pod 和容器的关系
@@ -211,7 +201,6 @@ iptables -S -t nat
 
 ```
 
-![bg](images/bg.png) 
 
 ---
 # Docker Volume 映射
@@ -224,7 +213,7 @@ touch test.data /data/
 # 退出查看
 ls /data
 ```
-![bg](images/bg.png) 
+
 
 ---
 # 后续 Kubernetes 课程介绍
@@ -243,7 +232,6 @@ ls /data
 1. Kubernetes 的日志监控与故障排除
 1. Kubernetes 的扩展开发
 
-![bg](images/bg.png) 
 
 ---
 ### FAQ

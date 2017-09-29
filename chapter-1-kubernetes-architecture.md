@@ -15,8 +15,7 @@
 
 1. Kubernetes 为何而生 
 1. Kubernetes 的架构
-
-![bg](images/bg.png) 
+ 
 
 ---
 # Kubernetes 为何而生 - 云发展到一个新阶段
@@ -33,7 +32,6 @@
 
 > **用户从关注资源的运维转向关注应用的开发运维成本**
 
-![bg](images/bg.png) 
 
 ---
 # Kubernetes 为何而生 - 容器的成熟奠定了基础
@@ -46,8 +44,6 @@
 ## 特点
 单进程标准化
 
-
-![bg](images/bg.png) 
 
 ---
 # 容器编排系统应运而生
@@ -67,7 +63,6 @@
 
 2.Mesos vs Kubernetes
 
-![bg](images/bg.png) 
 
 ---
 # Mesos 
@@ -75,7 +70,6 @@
 ![mesos](images/mesos-arch.jpg)
 [Mesos 架构以及源码浅析](http://jolestar.com/mesos-architecture/)
 
-![bg](images/bg.png) 
 
 ---
 # Mesos vs Kubernetes
@@ -89,15 +83,12 @@
 > Kubernetes is not a mere “orchestration system”; it eliminates the need for orchestration. The technical definition of “orchestration” is execution of a defined workflow: do A, then B, then C. In contrast, Kubernetes is comprised of a set of independent, composable control processes that continuously drive current state towards the provided desired state. It shouldn’t matter how you get from A to C: make it so. -- kubernetes
 
 
-![bg](images/bg.png) 
-
 ---
 # Kubernetes 的架构 - 始于编排而超越编排
 
 1. Kubernetes 的部署架构
 2. Kubernetes 的逻辑架构
 
-![bg](images/bg.png) 
 
 ---
 
@@ -110,7 +101,6 @@
 1. 一个状态存储
 1. 多个控制器
 
-![bg](images/bg.png) 
 
 ---
 
@@ -137,7 +127,6 @@ spec:
   
 ```
 
-![bg](images/bg.png) 
 
 ---
 # Kubernetes 的架构劣势
@@ -157,7 +146,6 @@ spec:
 1. 阅读本次课程中给出的论文，以及 Kubernetes 的官方文档，结合自己的编程运维经验，思考 Kubernetes 能解决你遇到的哪些问题，哪些可能解决不了。
 2. 手动搭建一个 Kubernetes 进行试验，初步熟悉 Kubernetes 的命令以及 API。（推荐通过 QingCloud青云的 appcenter 进行部署。https://appcenter.qingcloud.com/apps/app-u0llx5j8）
 
-![bg](images/bg.png) 
 
 ---
 ### 关于我
