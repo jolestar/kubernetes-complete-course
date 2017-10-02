@@ -113,7 +113,7 @@ cp -r /var/lib/xocker/image/busybox/ /var/lib/xocker/image/busybox.bak
 chroot /var/lib/xocker/image/busybox/ /bin/sh
 # 执行 rm -rf *, 然后退出看看效果
 # 恢复回来
-cp /var/lib/xocker/image/busybox.bak /var/lib/xocker/image/busybox
+cp -r /var/lib/xocker/image/busybox.bak /var/lib/xocker/image/busybox
 ```
 再看 aufs 的工作原理
 
