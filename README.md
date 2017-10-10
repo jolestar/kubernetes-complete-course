@@ -8,7 +8,7 @@
 -  [第一课：Kubernetes 架构概述](chapter-1-kubernetes-architecture.md)
 -  [第二课：Kubernetes 的安装和运维](chapter-2-kubernetes-install.md)
 -  [第三课：Kubernetes 的网络和存储](chapter-3-kubernetes-network-and-storage.md)
--  第四课：Kubernetes 的 API Spec 以及安全机制
+-  [第四课：Kubernetes 的 API Spec 以及安全机制](chapter-3-kubernetes-api-and-security.md)
 -  第五课：Kubernetes 的应用管理（案例）
 -  第六课：Kubernetes 的日志监控与故障排除
 -  第七课：Kubernetes 的扩展开发
