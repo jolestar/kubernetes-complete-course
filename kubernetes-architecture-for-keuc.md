@@ -33,14 +33,15 @@
 ---
 # Kubernetes 为何而生
 
-- **云发展到一个新阶段**
-  
-  用户从关注资源的运维转向关注应用的开发运维成本
+- 云发展到一个新阶段
+  - 按需的资源
+  - 对应用无侵入
+> 用户从关注资源的运维转向关注应用的开发运维成本
+- 容器的普及奠定了基础
+  - 应用安装包标准化
+  - 进程管理标准化
 
-- **容器的普及奠定了基础**
-  
-  应用安装包和进程的标准化
-
+> 用户需要一套系统来管理大规模的容器
 ---
 # 容器编排系统应运而生
 
@@ -60,9 +61,9 @@ We wanted people to be able to **manager app** for the data center just like the
 1. Borg, Omega, and Kubernetes
 
 ---
-# Docker Swarm
+## Docker Swarm
 
-<div style="float:right"><img src="images/swarm.png" height="400"/></div>
+<div style="float:right;"><img src="images/swarm-arch.jpg" height="440"/></div>
 
 - 去中心化
 - 组件内置 
@@ -169,14 +170,16 @@ spec:
 
 
 ---
-# Kubernetes 中的 API Spec Object
-
-1. Service: 一组 Pod 对外提供能力的抽象
-2. Replica: 控制 Pod 的副本
-3. Deployment: 控制 Replica 的版本（滚动升级）
-3. DaemonSet: 绑定 Pod 和 Node 关系
-4. StatefulSet: 控制 Pod 的网络标志以及存储
-5. Autoscale: 根据监控条件控制 Deployment 的副本数属性
+### Kubernetes 中的 API Spec Object
+- Core
+	- Pod/Container/Volume
+	- Service 一组 Pod 对外提供能力的抽象
+- Apps
+	- Replica: 控制 Pod 的副本
+	- Deployment: 控制 Replica 的版本（滚动升级）
+	- DaemonSet: 绑定 Pod 和 Node 关系
+	- StatefulSet: 控制 Pod 的网络标志以及存储
+5. Autoscaling: HPA 根据监控条件控制 Deployment 的副本数属性
 
 ---
 # Kubernetes 的架构优势
@@ -221,7 +224,8 @@ agreement:
 - [Declarative application management in Kubernetes](https://docs.google.com/document/d/1cLPGweVEYrVqQvBLJg6sxV-TrE5Rm2MNOBA_cxZP2WU)
 - [The State of the Kubernetes Ecosystem](https://thenewstack.io/ebooks/kubernetes/state-of-kubernetes-ecosystem/)
 - [Kubernetes lifecycle of a pod](https://dzone.com/articles/kubernetes-lifecycle-of-a-pod)
-- 《[Kubernetes 完全教程](http://edu.csdn.net/course/detail/6080)》
+- [Kubernetes 完全教程](http://edu.csdn.net/course/detail/6080)
+- [Swarm的进化和大规模应用](http://geek.csdn.net/news/detail/238936)
 
 ---
 
