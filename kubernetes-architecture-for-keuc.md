@@ -63,7 +63,7 @@ We wanted people to be able to **manager app** for the data center just like the
 ---
 ## Docker Swarm
 
-<div style="float:right;"><img src="images/swarm-arch.jpg" height="440"/></div>
+<div style="float:right;"><img src="images/swarm-arch.jpg" height="400"/></div>
 
 - 去中心化
 - 组件内置 
