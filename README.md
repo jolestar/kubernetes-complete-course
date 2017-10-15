@@ -19,6 +19,8 @@
 
 ![course_qrcode](images/course-qrcode.png)
 
+交流 QQ 群: 451252952
+
 
 
 > md 格式的演示片使用的工具是 [Marp](https://github.com/yhatt/marp) 来编辑生成 pdf 的。
