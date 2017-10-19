@@ -247,8 +247,8 @@ Kubernetes 的日志与监控
 ### 关于我
 
 个人博客: [http://jolestar.com](http://jolestar.com)
-课程 Github：[https://github.com/jolestar/kubernetes-complete-course]
-(https://github.com/jolestar/kubernetes-complete-course)
+课程 Github：[https://github.com/jolestar/kubernetes-complete-course](https://github.com/jolestar/kubernetes-complete-course)
+
 课程 QQ 群: 451252952
 
 ![about](http://jolestar.com/images/weichat/qrcode_jolestar_blog2.png)
